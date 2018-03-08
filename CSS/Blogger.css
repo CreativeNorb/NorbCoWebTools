@@ -1,0 +1,418 @@
+/*
+Piz's CSS for Blogger
+
+All original work (C)2008 by Piz; all rights reserved. Original work licensed under a Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States License. For licensing details see http://creativecommons.org/licenses/by-nc-nd/3.0/us/.
+
+THIS FILE IS SUBJECT TO CHANGE WITHOUT NOTICE.
+
+Some of the code in this file may be based on work by other authors; see code comments for details.
+
+This code conforms to OTIS, the One True Indentation Style. Religious fanatics will be laughed at and patted condescendingly on the head, then ignored.
+*/
+
+/*
+Global settings
+
+Settings that affect the entire blog rather than any particular section.
+*/
+
+#navbar-iframe
+	{
+	/*
+	Turn off display of the Blogger navigation bar at the top of the blog.
+	*/
+	   display: none;
+	    height: 0px;
+	visibility: hidden;
+	}
+
+/* End global settings */
+
+/*
+Post Settings
+
+Each post contains one or more of the following sections:
+
+blg_postSection (required): text of the post; appears in every post.
+
+blg_correctionSection (as needed): corrections of errors in the post; links back and forth with corrected text, which is marked in the post.
+
+blg_updateSection (optional): material related to the post which comes to light after it was originally posted.
+
+blg_footnoteSection (as needed): footnotes that go with the post text; links back and forth with the notes in the post.
+*/
+
+	/*
+	blg_postSection
+	*/
+	
+	.post .blg_postSection p
+		{
+		/*
+		We try to make our posts look as much like printed text as possible. That means indenting paragraphs and not having whitespace between them.
+		*/
+		margin-bottom: 0px;
+		   margin-top: 0px;
+		  text-indent: 3ex;
+		}
+
+.post .blg_postSection p:first-child,
+.post .blg_postSection .blg_noIndent
+		{
+		/*
+		The lead paragraph of the entire post, and the first paragraph of any subsection (such as a <blockquote>) is not indented. Also, sometimes it's necessary not to indent a particular paragraph.
+		*/
+	text-indent: 0px;
+		}
+
+.post .blg_postSection .blg_leadParagraph:first-line
+		{
+		/*
+		I think it's sophisto to display the first line of the lead paragraph of the post in small caps. ;)
+		*/
+		font-variant: small-caps;
+		}
+
+.post .blg_leadParagraph:first-letter,
+.post .blg_dropCap
+		{
+		/*
+		A drop cap in the lead paragraph is just cool.
+
+		blg_dropCap is only to be used when the first letter of the lead paragraph is inside an <a> tag. This is because IE7 and Firefox 2.17 don't display the drop cap correctly in this case. Put a <span> around the first letter to assign the class.
+		*/
+		       float: left;
+		   font-size: 400%;
+		 line-height: 75%;
+		margin-right: 0.1ex;
+		}
+
+	.post .blg_postSection .blg_signature
+		{
+		/*
+		In cases where we need to display something that looks like the signature at the end of a letter, use this.
+
+		DEV NOTE: Might have to add more if signatures appear in other than blg_postSection. Figure out why blg_postSection is necessary for this to work. Use the post "Save American Liberty..."
+		*/
+		 margin-top: auto;
+		text-indent: 0px;
+		}
+
+	.post .blg_emoticon
+		{
+		/*
+		Positions emoticons properly relative to their containing text.
+		*/
+		        border: 0px;
+		       padding: 0px;
+		vertical-align: middle;
+		}
+
+	.post .blg_correction
+		{
+		/*
+		Corrected text is italicized, and the "blush" emoticon is included with a link to the corresponding correction in a blg_correctionSection.
+		*/
+		font-style: italic;
+		}
+	
+	.post .blg_credit
+		{
+		/*
+		When I credit someone (another site, a correspondent, etc.) for providing me with material or links to material, I insert a "thumbs up" emoticon and title it a "Shout Out" to that source. This is the formatting for that icon. Usually this goes with images or embedded video, which is why the vertical alignment is "baseline." This throws off line spacing a bit when I put a "Shout Out" in text, but I do that very rarely so it's not worth making a whole separate style for it. I can just use blg_emoticon instead.
+		*/
+		        border: 0px;
+		       padding: 0px;
+		  padding-left: 0.5ex;
+		 padding-right: 0.5ex;
+		vertical-align: baseline;
+		}
+
+	.post .blg_backToTop
+		{
+		/*
+		This formats the text for the "Back to Top" link I include at the end of every post. It matches the style of the Blogger-inserted links for comments, backlinks, etc.
+
+		DEV NOTE: That specific style might turn out to be specific to the Minima layout, so might have to be moved to that stylesheet.
+		*/
+		margin-bottom: 0px;
+		   margin-top: 1em;
+		}
+
+	.post .blg_updateSection,
+	.post .blg_seeAlsoSection,
+	.post .blg_footnoteSection,
+	.post .blg_correctionSection
+		{
+		/*
+		For separating these sections from other sections.
+		*/
+		margin-top: 2ex;
+		}
+
+	.post .blg_footnoteSection
+		{
+		/*
+		For separating this sections from other sections, and formatting its text.
+		*/
+		border-top-style: dotted;
+		border-top-width: 1px;
+		       font-size: 85%;
+		}
+
+	.post .blg_footnoteSection sup
+		{
+		/*
+		Puts a little space between a footnote number and its text.
+		*/
+		margin-right: 0.5ex;
+		}
+
+	.post .blg_updateSection p,
+	.post .blg_seeAlsoSection p,
+	.post .blg_correctionSection p
+		{
+		/*
+		Paragraph formatting in these sections.
+		*/
+		margin-bottom: 0px;
+		   margin-top: 0px;
+		}
+	
+	.post .blg_footnoteSection p
+		{
+		/*
+		Paragraph formatting in this sections.
+		*/
+		margin-bottom: 1ex;
+		   margin-top: 0px;
+		}
+
+	.post .blg_insertCenter, .post .blg_insertLeft, .post .blg_insertRight
+		{
+		/*
+		Formatting for embedded images and video.
+		*/
+		font-variant: normal;
+		 text-indent: 0px;
+		}
+
+	.post .blg_insertCenter
+		{
+		/*
+		Formatting for objects centered and separating text above and below.
+		*/
+		margin-bottom: 2ex;
+		   margin-top: 2ex;
+		   text-align: center;
+		}
+
+	.post .blg_insertLeft
+		{
+		/*
+		Formatting for objects included within paragraphs, on the left with text wrapping around them.
+		*/
+		       float: left;
+		margin-right: 1ex;
+		}
+
+	.post .blg_insertRight
+		{
+		/*
+		Formatting for objects included within paragraphs, on the right with text wrapping around them.
+		*/
+		      float: right;
+		margin-left: 1ex;
+		}
+
+/* End post settings */
+
+/* 
+Sidebar settings
+
+Settings for sidebar widgets.
+*/
+
+	.sidebar .blg_sidebarSection
+		{
+		/*
+		Every HTML sidebar widget is contained in one of these.
+		*/
+		  font-size: 85%;
+		 text-align: center;
+		}
+
+	.sidebar .blg_sidebarSection p, .sidebar .blg_sidebarSection blockquote
+		{
+		/*
+		Formatting for paragraphs and blockquotes.
+		*/
+		   margin-bottom: 0px;
+		      margin-top: 0px;
+		}
+
+	.sidebar .blg_sidebarSection p
+		{
+		/*
+		More paragraph formatting.
+		*/
+		border-top-width: 1px;
+		}
+
+	.sidebar .blg_sidebarSection p:first-child, .sidebar .blg_sidebarSection blockquote, .sidebar .blg_sidebarSection blockquote p
+		{
+		/*
+		Even more paragraph formatting.
+		*/
+		border-top-width: 0px;
+		}
+
+/* End sidebar settings */
+
+/*
+Removed while testing blg_postSection.
+
+FIX COMMENTS IF RESTORING!!!
+
+.post .post_footer p
+	{
+*/
+	/*
+	This prevents FeedBurner's script-created footer from being indented.
+	*/
+/*
+	text-indent: 0px;
+	}
+End remove
+*/
+
+/* BEGIN OLD */
+
+#navbar-iframe
+	{
+	   display: none;
+	    height: 0px;
+	visibility: hidden;
+	}
+
+.post p
+	{
+	text-indent: 3ex;
+	}
+
+.post p, .post blockquote p
+	{
+	margin-bottom: 0px;
+	   margin-top: 0px;
+	}
+
+.post .blg-leadParagraph, .post .blg-noIndent
+	{
+	text-indent: 0px;
+	}
+	
+.post .blg-leadParagraph:first-line
+	{
+	font-variant: small-caps;
+	}
+
+.post .blg-leadParagraph:first-letter
+	{
+	       float: left;
+	   font-size: 400%;
+	 line-height: 75%;
+	margin-right: 0.5ex;
+	}
+
+.post .blg-signature
+	{
+	margin-top: auto;
+	text-indent: 0px;
+	}
+
+.post .blg-dropCap
+	{
+	       float: left;
+	   font-size: 400%;
+	 line-height: 75%;
+	margin-right: 0.5ex;
+	}
+
+.post .blg-emoticon
+	{
+	        border: 0px;
+	       padding: 0px;
+	vertical-align: middle;
+	}
+
+.post .blg-correction
+	{
+	font-style: italic;
+	}
+	
+.post .blg-credit
+	{
+	        border: 0px;
+	       padding: 0px;
+	  padding-left: 0.5ex;
+	 padding-right: 0.5ex;
+	vertical-align: baseline;
+	}
+
+.post .blg-backToTop
+	{
+	  font-size: 85%;
+	 margin-top: 1em;
+	text-indent: 0px;
+	}
+
+.post .blg-updateSection, .post .blg-seeAlsoSection, .post .blg-footnoteSection, .post .blg-correctionSection
+	{
+	border-top-width: 1px;
+	      margin-top: 2ex;
+	}
+
+.post .blg-footnoteSection
+	{
+	border-top-style: dotted;
+	       font-size: 85%;
+	}
+
+.post .blg-footnoteSection sup
+	{
+	   font-size: 100%;
+	margin-right: 0.5ex;
+	}
+
+.post .blg-footnoteSection p
+	{
+	  text-indent: 0px;
+	margin-bottom: 1ex;
+	}
+
+.post .blg-insertCenter, .post .blg-insertLeft, .post .blg-insertRight
+	{
+	font-variant: normal;
+	 text-indent: 0px;
+	}
+
+.post .blg-insertCenter
+	{
+	margin-bottom: 2ex;
+	   margin-top: 2ex;
+	   text-align: center;
+	}
+
+.post .blg-insertLeft
+	{
+	       float: left;
+	margin-right: 1ex;
+	}
+
+.post .blg-insertRight
+	{
+	      float: right;
+	margin-left: 1ex;
+	}
+
+/* END OLD */

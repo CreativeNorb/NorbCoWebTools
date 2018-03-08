@@ -1,0 +1,127 @@
+/*
+Piz's general CSS
+
+All original work (C)2008 by Piz; all rights reserved. Original work licensed under a Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States License. For licensing details see http://creativecommons.org/licenses/by-nc-nd/3.0/us/.
+
+THIS FILE IS SUBJECT TO CHANGE WITHOUT NOTICE.
+
+Some of the code in this file may be based on work by other authors; see code comments for details.
+
+This code conforms to OTIS, the One True Indentation Style. Religious fanatics will be laughed at and patted condescendingly on the head, then ignored.
+*/
+
+.piz_fontGiant
+	{
+	font-size: 400%;
+	}
+
+.piz_fontHuge
+	{
+	font-size: 200%;
+	}
+
+.piz_fontLarge
+	{
+	font-size: 130%;
+	}
+
+.piz_fontMedium
+	{
+	font-size: 100%;
+	}
+
+.piz_fontSmall
+	{
+	font-size: 85%;
+	}
+
+.piz_fontTiny
+	{
+	font-size: 78%;
+	}
+
+.piz_bold
+	{
+	font-weight: bold;
+	}
+	
+.piz_italic
+	{
+	font-style: italic;
+	}
+	
+.piz_monofont
+	{
+	font-family: 'andale mono', 'courier new', monospace;
+	}
+
+.piz_sansSerif
+	{
+	/*
+	DEV NOTE: Trebuchet may be specific to Blogger Minima layouts.
+	*/
+	font-family: 'Trebuchet MS', trebuchet, arial, verdana, helvetica, sans-serif;
+
+	}
+
+.piz_serif
+	{
+	/*
+	DEV NOTE: Georgia may be specific to Blogger Minima layouts.
+	*/
+	font-family: georgia, times, serif;
+	}
+
+/* BEGIN OLD */
+
+.piz-fontHuge
+	{
+	font-size: 200%;
+	}
+
+.piz-fontLarge
+	{
+	font-size: 130%;
+	}
+
+.piz-fontMedium
+	{
+	font-size: 100%;
+	}
+
+.piz-fontSmall
+	{
+	font-size: 85%;
+	}
+
+.piz-fontTiny
+	{
+	font-size: 78%;
+	}
+
+.piz-bold
+	{
+	font-weight: bold;
+	}
+	
+.piz-italic
+	{
+	font-style: italic;
+	}
+	
+.piz-monofont
+	{
+	font-family: 'andale mono', 'courier new', monospace;
+	}
+
+.piz-sansSerif
+	{
+	font-family: arial, helvetica, sans-serif;
+	}
+
+.piz-serif
+	{
+	font-family: georgia, times, serif;
+	}
+
+/* END OLD */
